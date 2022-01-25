@@ -18,5 +18,6 @@ module.exports = {
     camelcase: 'off',
     'arrow-body-style': 'off',
     'prefer-arrow-callback': 'off',
+    'arrow-parens': [2, 'as-needed'],
   },
 };
