@@ -22,7 +22,7 @@ module.exports = {
           description: 'status of todo; pending/completed',
           enum: ['pending', 'completed'],
         },
-        toDo_id: { type: 'string', description: 'Id of the Todo', required: true },
+        todo_id: { type: 'string', description: 'Id of the Todo', required: true },
       },
     },
   },
