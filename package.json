@@ -1,0 +1,33 @@
+{
+  "name": "todo-mgmt-system",
+  "author": "Raktim Shrestha",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "cross-env NODE_ENV=development nodemon ./bin/www",
+    "production": "NODE_ENV=production node ./bin/www",
+    "client": "cd ./client && yarn start",
+    "setup": "yarn && cd ./client && yarn",
+    "lint": "eslint --fix .",
+    "format": "prettier -w ."
+  },
+  "dependencies": {
+    "debug": "~2.6.9",
+    "dotenv": "^14.3.0",
+    "express": "^4.17.2",
+    "moment": "^2.29.1",
+    "mongoose": "^6.1.8",
+    "morgan": "^1.10.0",
+    "swagger-ui-express": "^4.1.6"
+  },
+  "devDependencies": {
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.3.2"
+  }
+}
