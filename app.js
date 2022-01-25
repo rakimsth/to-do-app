@@ -23,12 +23,19 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 app.use('/documentation', swaggerUi.serve, swaggerUi.setup(swaggerDoc, { explorer: true }));
 app.use('/', routeManager);
 
-app.use((error, req, res) => {
-  res.status(error.status || 500);
-  res.json({
-    status: error.status || 500,
+// catch 404 and forwarding to error handler
+app.use((req, res, next) => {
+  const err = new Error('Not Found');
+  err.status = 404;
+  next(err);
+});
+
+app.use((error, req, res, next) => {
+  res.status(error.status || 500).json({
     message: error.message,
+    success: false,
     stack: process.env.NODE_ENV === 'development' ? error.stack : '',
+    data: error.data,
   });
 });
 module.exports = app;
