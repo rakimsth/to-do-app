@@ -1,4 +1,6 @@
 const Model = require('./todo.model');
+const SubtaskModel = require('../subtasks/subtask.model');
+const { update } = require('../subtasks/subtask.controller');
 
 class Controller {
   add(payload) {
@@ -27,7 +29,12 @@ class Controller {
     return Model.findById(id);
   }
 
-  update(id, status) {
+  async update(id, status) {
+    const allSubtasks = await SubtaskModel.find({ todo_id: id, status: 'pending' });
+    allSubtasks.map(async d => {
+      const resp = await update(d.id, status);
+      return resp;
+    });
     return Model.findByIdAndUpdate(id, status, { new: true });
   }
 
