@@ -14,7 +14,7 @@ class Controller {
     return Model.findByIdAndUpdate(id, payload, { new: true });
   }
 
-  delete(id) {
+  remove(id) {
     return Model.findByIdAndRemove(id);
   }
 }

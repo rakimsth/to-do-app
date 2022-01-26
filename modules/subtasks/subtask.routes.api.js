@@ -24,9 +24,9 @@ router.put('/:id', async (q, r, n) => {
     .catch(e => n(e));
 });
 
-// delete schedule
+// delete subtask
 router.delete('/:id', async (q, r, n) => {
-  Controller.delete(q.params.id)
+  Controller.remove(q.params.id)
     .then(d => r.json(d))
     .catch(e => n(e));
 });

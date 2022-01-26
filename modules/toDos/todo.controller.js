@@ -38,7 +38,7 @@ class Controller {
     return Model.findByIdAndUpdate(id, status, { new: true });
   }
 
-  delete(id) {
+  remove(id) {
     return Model.findByIdAndRemove(id);
   }
 }
