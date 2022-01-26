@@ -5,7 +5,6 @@ module.exports = {
     await mongoose.connect(global.__MONGO_URI__, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      useFindAndModify: false,
     });
     await mongoose.connection.db.dropDatabase();
   },
@@ -17,7 +16,6 @@ module.exports = {
 
   async clearDatabase() {
     const collections = await mongoose.connection.db.collections();
-
     for (const collection of collections) {
       await collection.deleteMany();
     }
