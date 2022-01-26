@@ -13,11 +13,4 @@ module.exports = {
     await mongoose.connection.db.dropDatabase();
     await mongoose.disconnect(done);
   },
-
-  async clearDatabase() {
-    const collections = await mongoose.connection.db.collections();
-    for (const collection of collections) {
-      await collection.deleteMany();
-    }
-  },
 };
