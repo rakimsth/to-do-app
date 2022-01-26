@@ -5,33 +5,11 @@ import ACTION from './actions';
 
 const initialState = {
   data: [],
-  loading: false,
 };
 
 export const Context = createContext(initialState);
 export const ContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(Reduce, initialState);
-
-  function setLoading() {
-    dispatch({ type: ACTION.SET_LOADING });
-  }
-
-  function resetLoading() {
-    dispatch({ type: ACTION.RESET_LOADING });
-  }
-
-  function list() {
-    return new Promise((resolve, reject) => {
-      Service.list()
-        .then(res => {
-          dispatch({ type: ACTION.LIST_SUCCESS, res });
-          resolve(res);
-        })
-        .catch(err => {
-          reject(err);
-        });
-    });
-  }
 
   function update(id, payload) {
     return new Promise((resolve, reject) => {
@@ -75,10 +53,6 @@ export const ContextProvider = ({ children }) => {
     <Context.Provider
       value={{
         data: state.data,
-        loading: state.loading,
-        list,
-        setLoading,
-        resetLoading,
         add,
         update,
         remove,

@@ -8,16 +8,6 @@ export default function Reducers(state, action) {
         ...state,
         data: result,
       };
-    case `${ACTION.SET_LOADING}`:
-      return {
-        ...state,
-        loading: true,
-      };
-    case `${ACTION.RESET_LOADING}`:
-      return {
-        ...state,
-        loading: false,
-      };
     case `${ACTION.DELETE_SUCCESS}`:
       return {
         ...state,

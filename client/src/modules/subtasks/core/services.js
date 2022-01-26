@@ -4,18 +4,6 @@ import API from '../../../constants';
 
 const URL = `${API.SUBTASKS}`;
 
-export function list() {
-  return new Promise((resolve, reject) => {
-    axios(URL)
-      .then(res => {
-        resolve(res.data);
-      })
-      .catch(err => {
-        reject(err.response.data);
-      });
-  });
-}
-
 export function add(payload) {
   return new Promise((resolve, reject) => {
     axios
