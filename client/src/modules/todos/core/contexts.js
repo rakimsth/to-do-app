@@ -33,7 +33,7 @@ export const ContextProvider = ({ children }) => {
     });
   }
 
-  function update(id, payload) {
+  function updateTodo(id, payload) {
     return new Promise((resolve, reject) => {
       Service.update(id, payload)
         .then(res => {
@@ -58,19 +58,6 @@ export const ContextProvider = ({ children }) => {
     });
   }
 
-  function remove(id) {
-    return new Promise((resolve, reject) => {
-      Service.remove(id)
-        .then(res => {
-          dispatch({ type: ACTION.DELETE_SUCCESS, res });
-          resolve(res);
-        })
-        .catch(err => {
-          reject(err);
-        });
-    });
-  }
-
   return (
     <Context.Provider
       value={{
@@ -80,8 +67,7 @@ export const ContextProvider = ({ children }) => {
         setLoading,
         resetLoading,
         add,
-        update,
-        remove,
+        updateTodo,
         dispatch,
       }}
     >
