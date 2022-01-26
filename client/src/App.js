@@ -1,5 +1,13 @@
-function App() {
-  return <div className="App">Hello</div>;
-}
+import React from 'react';
+import { ToastProvider } from 'react-toast-notifications';
+import TodoList from './modules/todos';
 
-export default App;
+export default function App() {
+  return (
+    <>
+      <ToastProvider>
+        <TodoList />
+      </ToastProvider>
+    </>
+  );
+}
