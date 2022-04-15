@@ -2,6 +2,15 @@
 
 ## Introduction
 
+Simple Todo (Task) management application made by using MERN Stack. It includes swagger for documentation, Jest for testing controllers/routes and database mock.
+Frontend is powered by React.js using hooks. 
+
+It includes following features:
+- Should allow to create a task
+- Should allow adding multiple subtasks to a parent task
+- Should allow marking both task and subtask as done or undone
+- Tasks and its subtasks should be displayed as accordion
+
 ## Requirements
 
 - [Node](https://nodejs.org) `14` or newer
