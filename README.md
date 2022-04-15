@@ -23,8 +23,6 @@ This project structure is by no means "**THE**" perfect project structure. It's 
 Just clone the repo and start (assuming you're using [Yarn](https://yarnpkg.com)):
 
 ```shell
-$ unzip the zip folder named raktim_shrestha
-$ cd raktim_shrestha
 $ yarn setup
 $ In one terminal, run `yarn start`
 $ In another terminal, run `yarn client`
