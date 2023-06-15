@@ -3,9 +3,10 @@
 ## Introduction
 
 Simple Todo (Task) management application made by using MERN Stack. It includes swagger for documentation, Jest for testing controllers/routes and database mock.
-Frontend is powered by React.js using hooks. 
+Frontend is powered by React.js using hooks.
 
 It includes following features:
+
 - Should allow to create a task
 - Should allow adding multiple subtasks to a parent task
 - Should allow marking both task and subtask as done or undone
@@ -33,7 +34,9 @@ Just clone the repo and start (assuming you're using [Yarn](https://yarnpkg.com)
 
 ```shell
 $ yarn setup
+$ change env.example folder to env folder and make appropriate changes to env file.
 $ In one terminal, run `yarn start`
+$ cd into client folder, replace . in .env.example
 $ In another terminal, run `yarn client`
 ```
 
