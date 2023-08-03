@@ -4,9 +4,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
     "dev": "cross-env NODE_ENV=development nodemon ./bin/www",
-    "production": "NODE_ENV=production node ./bin/www",
+    "start": "NODE_ENV=production node ./bin/www",
     "client": "cd ./client && yarn start",
     "setup": "yarn && cd ./client && yarn",
     "lint": "eslint --fix .",
