@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon ./bin/www",
-    "start": "NODE_ENV=production node ./bin/www",
+    "start": "npm run build && NODE_ENV=production node ./bin/www",
+    "build": "cd ./client && npm run build",
     "client": "cd ./client && yarn start",
     "setup": "yarn && cd ./client && yarn",
     "lint": "eslint --fix .",
