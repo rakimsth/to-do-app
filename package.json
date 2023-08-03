@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon ./bin/www",
     "start": "NODE_ENV=production node ./bin/www & npm run build",
-    "build": "cd ./client && npm run build",
+    "build": "cd client && npm install && npm run build",
     "client": "cd ./client && yarn start",
     "setup": "yarn && cd ./client && yarn",
     "lint": "eslint --fix .",
